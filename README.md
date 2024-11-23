@@ -43,8 +43,7 @@ In this task, I will open a network packet capture file that contains data captu
 
 Not all packets are the same color. Coloring rules provide high-level visual cues to quickly classify different types of data. For example, light blue packets contain DNS traffic, while green packets contain a mixture of TCP and HTTP protocol traffic.
 
-![Task_1](URL)
-
+![1](https://github.com/user-attachments/assets/65c4bae0-3ef3-4d34-ba75-1d6cbd7b4a4c)
 
 ### Task 2: Apply a Basic Wireshark Filter and Inspect a Packet
 
@@ -59,6 +58,8 @@ In this task, I will open a packet in Wireshark for a detailed exploration and f
      ```
    - Press `ENTER` or click the Apply display filter icon in the filter text box.
    - The list of packets will be significantly reduced, displaying only packets where either the source or destination IP address matches the entered address. The packets will be color-coded: light pink for ICMP protocol packets and light green for TCP (and HTTP, a subset of TCP) packets.
+
+![2](https://github.com/user-attachments/assets/c574fb6b-315f-4649-adf4-db03d22b3921)
 
 2. **Inspect a Packet:**
    - Double-click the first packet that lists TCP as the protocol to open a packet details pane window.
@@ -77,9 +78,13 @@ In this task, I will open a packet in Wireshark for a detailed exploration and f
 
 **TCP Destination Port:**
    - The TCP destination port of this TCP packet is port 80.
+
+![3](https://github.com/user-attachments/assets/1e156228-7941-4a4c-a8b1-d31e59198216)
    
 5. **Inspect TCP Flags:**
    - In the Transmission Control Protocol subtree, scroll down and double-click "Flags" to view detailed information about the TCP flags set in this packet.
+
+![flags](https://github.com/user-attachments/assets/3b5a9b29-c113-4f06-89ff-1e9295167ff6)
 
 6. **Close the Detailed Inspection Window:**
    - Click the X icon to close the detailed packet inspection window.
@@ -87,9 +92,10 @@ In this task, I will open a packet in Wireshark for a detailed exploration and f
 7. **Clear the Display Filter:**
    - Click the X Clear display filter icon in the Wireshark filter bar to clear the IP address filter.
 
+![4](https://github.com/user-attachments/assets/a850f7c2-2b55-4c50-ba70-99bf50de1b35)
+
 By completing this task, I will have a comprehensive understanding of how to apply filters in Wireshark and inspect the detailed layers and protocols of network packets.
 
-![Task_2](URL)
 
 ### Task 3: Use Filters to Select Packets
 
@@ -105,12 +111,10 @@ In this task, I will use filters to analyze specific network packets based on th
    - Press `ENTER` or click the Apply display filter icon.
    - A filtered list will be displayed with fewer entries, showing only packets from the IP address 142.250.1.139.
 
-![Task_2](URL)
+![6](https://github.com/user-attachments/assets/7b9a751b-ea9d-4cc2-8207-2b91627640ff)
 
 2. **Clear the IP Address Filter:**
    - Click the X Clear display filter icon in the Wireshark filter bar.
-
-![Task_2](URL)
 
 3. **Filter Traffic for a Specific Destination IP Address:**
    - Enter the following filter into the "Apply a display filter..." text box:
@@ -119,6 +123,8 @@ In this task, I will use filters to analyze specific network packets based on th
      ```
    - Press `ENTER` or click the Apply display filter icon.
    - A filtered list will be displayed with only packets sent to the IP address 142.250.1.139.
+
+![7](https://github.com/user-attachments/assets/ece0c724-633a-470f-9417-81434c121408)
 
 4. **Clear the IP Address Filter:**
    - Click the X Clear display filter icon in the Wireshark filter bar.
@@ -131,6 +137,8 @@ In this task, I will use filters to analyze specific network packets based on th
    - Press `ENTER` or click the Apply display filter icon.
    - Double-click the first packet in the list (you may need to scroll back to display the first packet in the filtered list).
 
+![016](https://github.com/user-attachments/assets/17fe4ef1-0c73-4f55-878b-80f199d883fa)
+
 6. **Inspect Ethernet II and IP Subtrees:**
    - Open the "Ethernet II" subtree to verify the MAC address is listed as either the source or destination address.
    - Collapse the "Ethernet II" subtree and expand the "Internet Protocol Version 4" subtree to view details such as the Time to Live and Protocol fields.
@@ -138,8 +146,8 @@ In this task, I will use filters to analyze specific network packets based on th
 **Question:**
    - What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
      - TCP
-![Task-_3](URL)
 
+![8](https://github.com/user-attachments/assets/8b6595f1-0050-4643-a5f1-819778d60a36)
 
 ### Task 4: Use Filters to Explore DNS Packets
 
@@ -158,12 +166,14 @@ In this task, I will use filters to select and examine DNS traffic, exploring ho
 2. **Inspect DNS Query:**
    - Expand the "Domain Name System (query)" subtree and then expand "Queries" to find the queried website name (opensource.google.com).
 
-![Task_4](URL)
+![9](https://github.com/user-attachments/assets/caeae356-be9b-4d4e-bd6a-d939f3b93cbb)
+
 
 3. **Inspect DNS Answer:**
    - Open the fourth packet in the list, expand "Domain Name System (query)" and then "Answers" to view the IP addresses associated with the queried name.
 
-![Task_4](URL)
+![010](https://github.com/user-attachments/assets/91201ebd-b83b-4465-9063-c9d1bf6e328e)
+
 
 ### Task 5: Use Filters to Explore TCP Packets
 
@@ -183,22 +193,22 @@ In this task, I will use additional filters to select and examine TCP packets, l
    - What is the Time to Live value of the packet in the Internet Protocol Version 4 subtree?
      - 64
     
-![Task_5](URL)
+![011](https://github.com/user-attachments/assets/12367b65-ebc3-4579-a600-b75cdcebc1da)
    
    - What is the Frame Length of the packet in the Frame subtree?
      - 54 bytes
 
-![Task_5](URL)     
+![012](https://github.com/user-attachments/assets/6cdc5979-6f31-497d-ba99-4fa5a922f212)   
    
    - What is the Header Length of the packet in the Internet Protocol Version 4 subtree?
      - 20 bytes
 
-![Task_5](URL)     
+![013](https://github.com/user-attachments/assets/8d6ea737-d4d3-48c2-878d-0d2ac66c98c7)  
    
    - What is the Destination Address in the Internet Protocol Version 4 subtree?
      - 169.254.169.254
 
-![Task_5](URL)
+![014](https://github.com/user-attachments/assets/c42b0478-1815-4797-b14a-81c86c98b280)
 
 2. **Close the Inspection Window and Clear the Filter:**
    - Click the X icon to close the detailed packet inspection window.
@@ -211,7 +221,7 @@ In this task, I will use additional filters to select and examine TCP packets, l
      ```
    - Press `ENTER` or click the Apply display filter icon to filter packets containing web requests made with the curl command.
 
-![Task_5](URL)
+![015](https://github.com/user-attachments/assets/dbfdf7a3-c7a8-4be3-a850-1649a067e2e1)
 
 ## Conclusion
 
